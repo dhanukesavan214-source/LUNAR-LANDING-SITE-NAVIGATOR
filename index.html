@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar Navigator | Moon Landing Site Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#home">Lunar Navigator</a>
+  <div class="links">
+    <a href="#map">Map</a>
+    <a href="#sites">Sites</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <h1>Pick a landing site on the Moon.</h1>
+  <p>Spin the globe, search a region, and compare terrain, temperature and scientific value before you choose where to touch down.</p>
+  <a href="#map" class="button">Open the lunar map</a>
+</header>
+
+<section class="facts" aria-label="Moon facts">
+  <div><strong>3,474 km</strong><span>Moon diameter</span></div>
+  <div><strong>−173 °C</strong><span>Approx. night temperature</span></div>
+  <div><strong>+127 °C</strong><span>Approx. day temperature</span></div>
+  <div><strong>1.62 m/s²</strong><span>Surface gravity</span></div>
+</section>
+
+<section id="map">
+  <div class="section-title">
+    <h2>Interactive lunar map</h2>
+    <p>Drag to rotate. Tap an amber marker, or search for a site by name.</p>
+  </div>
+
+  <div class="search">
+    <input type="text" id="site-search" list="site-names" placeholder="Search a landing site" autocomplete="off" aria-label="Search landing site">
+    <datalist id="site-names">
+      <option value="Mare Tranquillitatis">
+      <option value="Shackleton Crater">
+      <option value="Tycho Crater">
+      <option value="Aristarchus Plateau">
+    </datalist>
+    <button class="button" id="search-btn" type="button">Search</button>
+  </div>
+
+  <div id="moon-canvas" aria-label="Interactive 3D Moon"></div>
+  <div id="site-info" class="site-info" style="display:none;" aria-live="polite"></div>
+</section>
+
+<section id="sites">
+  <div class="section-title">
+    <h2>Candidate landing sites</h2>
+    <p>Select a site to fly the map there and see its details.</p>
+  </div>
+
+  <div class="sites">
+    <button class="site-card" type="button" data-site="Mare Tranquillitatis">
+      <span class="tag">Historical</span>
+      <h3>Mare Tranquillitatis</h3>
+      <p>A flat basaltic plain and the landing region of Apollo 11.</p>
+      <small>8.5° N, 31.4° E</small>
+    </button>
+
+    <button class="site-card" type="button" data-site="Shackleton Crater">
+      <span class="tag">South pole</span>
+      <h3>Shackleton Crater</h3>
+      <p>A polar crater with permanently shadowed floors that may hold water ice.</p>
+      <small>89.9° S</small>
+    </button>
+
+    <button class="site-card" type="button" data-site="Tycho Crater">
+      <span class="tag">Geology</span>
+      <h3>Tycho Crater</h3>
+      <p>A young, rugged impact crater with a bright ray system.</p>
+      <small>43.3° S, 11.2° W</small>
+    </button>
+
+    <button class="site-card" type="button" data-site="Aristarchus Plateau">
+      <span class="tag">Geology</span>
+      <h3>Aristarchus Plateau</h3>
+      <p>A bright volcanic plateau with varied terrain.</p>
+      <small>23.7° N, 47.4° W</small>
+    </button>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h2>About Lunar Navigator</h2>
+    <p>A concept platform for lunar landing-site exploration.</p>
+  </div>
+
+  <div class="info-grid">
+    <div>
+      <h3>Mission objective</h3>
+      <p>Help people explore possible landing locations using terrain, environmental and scientific information.</p>
+    </div>
+    <div>
+      <h3>AI and ML integration</h3>
+      <p>Future versions can use machine learning to evaluate terrain images and score landing-site suitability.</p>
+    </div>
+    <div>
+      <h3>Future features</h3>
+      <p>Real lunar imagery, elevation maps, hazard detection, sunlight analysis and AI-assisted site recommendations.</p>
+    </div>
+    <div>
+      <h3>Exploration</h3>
+      <p>An interactive learning tool that makes lunar exploration data easier to understand.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Lunar Navigator © 2026<br>
+  Educational project, Moon exploration concept
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
