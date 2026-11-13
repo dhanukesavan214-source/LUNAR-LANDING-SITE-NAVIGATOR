@@ -40,18 +40,25 @@
   </div>
 
   <div class="search">
-    <input type="text" id="site-search" list="site-names" placeholder="Search a landing site" autocomplete="off" aria-label="Search landing site">
-    <datalist id="site-names">
-      <option value="Mare Tranquillitatis">
-      <option value="Shackleton Crater">
-      <option value="Tycho Crater">
-      <option value="Aristarchus Plateau">
-    </datalist>
-    <button class="button" id="search-btn" type="button">Search</button>
-  </div>
+    <input type="text" id="site-search" list="site-names"
+        placeholder="Search a landing site"
+        autocomplete="off"
+        aria-label="Search landing site">
 
-  <div id="moon-canvas" aria-label="Interactive 3D Moon"></div>
-  <div id="site-info" class="site-info" style="display:none;" aria-live="polite"></div>
+    <datalist id="site-names">
+        <option value="Mare Tranquillitatis">
+        <option value="Shackleton Crater">
+        <option value="Tycho Crater">
+        <option value="Aristarchus Plateau">
+    </datalist>
+
+    <button class="button" id="search-btn" type="button">Search</button>
+</div>
+
+<!-- SITE INFORMATION WILL APPEAR HERE -->
+<div id="site-info" class="site-info" style="display:none;" aria-live="polite"></div>
+
+<div id="moon-canvas" aria-label="Interactive 3D Moon"></div>
 </section>
 
 <section id="sites">
